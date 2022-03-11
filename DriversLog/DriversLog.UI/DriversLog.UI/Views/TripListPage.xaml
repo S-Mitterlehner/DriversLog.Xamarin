@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:DriversLog.UI.ViewModels;assembly=DriversLog.UI"
+             xmlns:converter="clr-namespace:DriversLog.UI.Converter;assembly=DriversLog.UI"
+             x:Class="DriversLog.UI.Views.TripListPage"
+             x:DataType="vm:TripListViewModel">
+    <ContentPage.Resources>
+        <converter:PrefixSuffixConverter x:Key="prefixSuffixConverter" Suffix="km"/>
+    </ContentPage.Resources>
+
+    <ListView ItemsSource="{Binding Trips}"
+              CachingStrategy="RecycleElement">
+    <ListView.ItemTemplate>
+        <DataTemplate>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Label Grid.Row="0" Grid.Column="0" Text="{Binding From}" FontSize="Small"/>
+                <Label Grid.Row="0" Grid.Column="1" Text="{Binding Distance, Converter={StaticResource prefixSuffixConverter}}" FontSize="Bold"/>
+                <Label Grid.Row="0" Grid.Column="2" Text="{Binding Destination}" FontSize="Small"/>
+
+
+            </Grid>
+        </DataTemplate>
+    </ListView.ItemTemplate>
+  </ListView>
+</ContentPage>

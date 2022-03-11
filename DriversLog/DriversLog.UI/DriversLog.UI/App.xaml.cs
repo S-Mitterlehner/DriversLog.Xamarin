@@ -1,8 +1,4 @@
-﻿using DriversLog.UI.Services;
-using DriversLog.UI.Views;
-using System;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+﻿using Xamarin.Forms;
 
 namespace DriversLog.UI
 {
@@ -13,7 +9,7 @@ namespace DriversLog.UI
         {
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
+            //DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();
         }
 

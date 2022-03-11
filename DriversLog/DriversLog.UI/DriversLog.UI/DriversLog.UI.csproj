@@ -9,4 +9,20 @@
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />  
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\DriversLog.Core\DriversLog.Core.csproj" />
+    <ProjectReference Include="..\..\DriversLog.Trip.Contract\DriversLog.Trip.Contract.csproj" />
+    <ProjectReference Include="..\..\DriversLog.Trip.Sqlite\DriversLog.Trip.Sqlite.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\TripListPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Converter\" />
+  </ItemGroup>
 </Project>

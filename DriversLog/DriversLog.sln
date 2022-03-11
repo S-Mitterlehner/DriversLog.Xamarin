@@ -5,7 +5,15 @@ VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriversLog.UI.Android", "DriversLog.UI\DriversLog.UI.Android\DriversLog.UI.Android.csproj", "{E618A8C4-AB68-4E72-96AC-D108CFFF4F74}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriversLog.UI", "DriversLog.UI\DriversLog.UI\DriversLog.UI.csproj", "{50399310-E8BC-4A9D-AF5C-5509712C7159}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DriversLog.UI", "DriversLog.UI\DriversLog.UI\DriversLog.UI.csproj", "{50399310-E8BC-4A9D-AF5C-5509712C7159}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriversLog.Trip.Contract", "DriversLog.Trip.Contract\DriversLog.Trip.Contract.csproj", "{54809DDC-4586-4FE8-BD97-8BA0EC6B45C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriversLog.Trip.Sqlite", "DriversLog.Trip.Sqlite\DriversLog.Trip.Sqlite.csproj", "{8B2EC9BE-74C6-4D3C-A891-6C1392976F82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriversLog.Core", "DriversLog.Core\DriversLog.Core.csproj", "{9D2838CA-2373-4411-8196-800236DB5686}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriversLog.UI.Tests", "DriversLog.UI.Tests\DriversLog.UI.Tests.csproj", "{D5B673B6-D81D-4258-8E12-1D7C612E308B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +33,22 @@ Global
 		{50399310-E8BC-4A9D-AF5C-5509712C7159}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50399310-E8BC-4A9D-AF5C-5509712C7159}.Release|Any CPU.Build.0 = Release|Any CPU
 		{50399310-E8BC-4A9D-AF5C-5509712C7159}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{54809DDC-4586-4FE8-BD97-8BA0EC6B45C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54809DDC-4586-4FE8-BD97-8BA0EC6B45C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54809DDC-4586-4FE8-BD97-8BA0EC6B45C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54809DDC-4586-4FE8-BD97-8BA0EC6B45C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B2EC9BE-74C6-4D3C-A891-6C1392976F82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B2EC9BE-74C6-4D3C-A891-6C1392976F82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B2EC9BE-74C6-4D3C-A891-6C1392976F82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B2EC9BE-74C6-4D3C-A891-6C1392976F82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D2838CA-2373-4411-8196-800236DB5686}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D2838CA-2373-4411-8196-800236DB5686}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D2838CA-2373-4411-8196-800236DB5686}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D2838CA-2373-4411-8196-800236DB5686}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5B673B6-D81D-4258-8E12-1D7C612E308B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5B673B6-D81D-4258-8E12-1D7C612E308B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5B673B6-D81D-4258-8E12-1D7C612E308B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5B673B6-D81D-4258-8E12-1D7C612E308B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
