@@ -18,6 +18,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Views\TripEditPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\TripListPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

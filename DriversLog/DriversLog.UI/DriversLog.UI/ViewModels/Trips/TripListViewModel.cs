@@ -8,7 +8,7 @@ using DriversLog.Trip.Contract;
 using MvvmCross.Commands;
 using Xamarin.Forms;
 
-namespace DriversLog.UI.ViewModels
+namespace DriversLog.UI.ViewModels.Trips
 {
     public class TripListViewModel : BaseViewModel
     {

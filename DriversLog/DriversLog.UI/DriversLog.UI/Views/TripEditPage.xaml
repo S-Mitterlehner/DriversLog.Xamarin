@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:DriversLog.UI.ViewModels.Trips;assembly=DriversLog.UI"
+             x:Class="DriversLog.UI.Views.TripEditPage"
+             x:DataType="vm:TripEditViewModel">
+    <ContentPage.Content>
+        <StackLayout>
+            <DatePicker Date="{Binding Date}" />
+            <Entry Text="{Binding From}"/>
+            <TimePicker Time="{Binding Departure}"/>
+            <Line Height="2" />
+            <Entry Text="{Binding Destination}"/>
+            <TimePicker Time="{Binding Arrival}"/>
+            <Entry Text="{Binding Distance}"/>
+            <Line Height="2"/>
+            <Button Text="Save" Command="{Binding SaveCommand}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

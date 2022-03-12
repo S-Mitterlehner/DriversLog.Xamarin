@@ -3,8 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:DriversLog.UI.ViewModels;assembly=DriversLog.UI"
              xmlns:converter="clr-namespace:DriversLog.UI.Converter;assembly=DriversLog.UI"
+             xmlns:trips="clr-namespace:DriversLog.UI.ViewModels.Trips;assembly=DriversLog.UI"
              x:Class="DriversLog.UI.Views.TripListPage"
-             x:DataType="vm:TripListViewModel">
+             x:DataType="trips:TripListViewModel">
     <ContentPage.Resources>
         <converter:PrefixSuffixConverter x:Key="prefixSuffixConverter" Suffix="km"/>
     </ContentPage.Resources>
