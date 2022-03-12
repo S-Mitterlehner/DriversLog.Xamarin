@@ -8,30 +8,53 @@
     <ContentPage.Resources>
         <converter:PrefixSuffixConverter x:Key="prefixSuffixConverter" Suffix="km"/>
     </ContentPage.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
 
-    <ListView ItemsSource="{Binding Trips}"
-              CachingStrategy="RecycleElement">
-    <ListView.ItemTemplate>
-        <DataTemplate>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="1*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
 
-                <Label Grid.Row="0" Grid.Column="0" Text="{Binding From}" FontSize="Small"/>
-                <Label Grid.Row="0" Grid.Column="1" Text="{Binding Distance, Converter={StaticResource prefixSuffixConverter}}" FontSize="Bold"/>
-                <Label Grid.Row="0" Grid.Column="2" Text="{Binding Destination}" FontSize="Small"/>
+            <Entry Grid.Column="0" Text="{Binding SelectedYear}" ReturnType="Next"/>
+            <Picker Grid.Column="1" 
+                    SelectedItem="{Binding SelectedMonth}" 
+                    ItemsSource="{Binding Months}"/>
+            <Button Grid.Column="2" Text=">" Command="{Binding ReloadTripsCommand}"/>
+        </Grid>
 
+        <ListView Grid.Row="1"
+                  ItemsSource="{Binding Trips}"
+                  CachingStrategy="RecycleElement">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
 
-            </Grid>
-        </DataTemplate>
-    </ListView.ItemTemplate>
-  </ListView>
+                        <Label Grid.Row="0" Grid.Column="0" Text="{Binding From}" FontSize="Small"/>
+                        <Label Grid.Row="0" Grid.Column="1" Text="{Binding Distance, Converter={StaticResource prefixSuffixConverter}}" FontSize="Bold"/>
+                        <Label Grid.Row="0" Grid.Column="2" Text="{Binding Destination}" FontSize="Small"/>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Grid.Row="2"
+            Command="{Binding AddCommand}" 
+            Text="+"/>
+    </Grid>
 </ContentPage>

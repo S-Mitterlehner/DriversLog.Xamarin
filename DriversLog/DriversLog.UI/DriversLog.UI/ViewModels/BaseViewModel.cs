@@ -1,17 +1,14 @@
-﻿using DriversLog.UI.Models;
-using DriversLog.UI.Services;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace DriversLog.UI.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
-        public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
-
         bool isBusy = false;
         public bool IsBusy
         {
@@ -37,6 +34,11 @@ namespace DriversLog.UI.ViewModels
             onChanged?.Invoke();
             OnPropertyChanged(propertyName);
             return true;
+        }
+
+        public virtual Task InitializeAsync()
+        {
+            return Task.CompletedTask;
         }
 
         #region INotifyPropertyChanged
